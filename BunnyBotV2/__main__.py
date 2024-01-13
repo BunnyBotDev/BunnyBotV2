@@ -4,6 +4,9 @@ import os
 import time
 from dotenv import load_dotenv
 import cmds.debug as debug
+import cmds.gencom as gencom
+import pythonping
+from pythonping import ping
 
 
 #grabs my token
@@ -20,6 +23,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix="bb", intents=intents)
 bot.tree.add_command(debug.dinfo(bot), guild=GUILD)
+bot.tree.add_command(gencom.gcom(bot), guild=GUILD)
 
 #Starting BunnyBot, syncing commmands to guild, print ready
 

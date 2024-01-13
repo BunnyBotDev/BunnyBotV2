@@ -21,5 +21,11 @@ class dinfo(apc.Group):
     @apc.command()
     async def lastfileupdate(self, interaction: discord.Interaction):
         """display the last command ran on the bot"""
-        await interaction.response.send_message("Debug Commands was created: , and was last updated:", ephemeral=True)
+        await interaction.response.send_message("I dont work yet!", ephemeral=True)
+        
+    @apc.command()
+    async def changelog(self, interaction: discord.Interaction):
+        """Whats happened!"""
+        with open('cmds/changelog.txt') as f:
+            await interaction.response.send_message(f.read(), ephemeral=True)
 
