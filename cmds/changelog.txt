@@ -1,7 +1,7 @@
 ```version DEV-1.1.0:
 Added:
 Fixed: Avatar (I work now!)
-changed: naming so that the groups are more discord friendly!
+changed: naming so that the groups are more discord friendly! Moved and changed the internal file setup to allow direct-git pushes from my code instance. Deleted redundant and unused packages/requirements
 Bugs:
 
 version DEV-1.0.0:
