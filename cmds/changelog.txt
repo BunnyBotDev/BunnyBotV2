@@ -1,0 +1,10 @@
+```version DEV-1.1.0:
+Added:
+Fixed: Avatar (I work now!)
+changed: naming so that the groups are more discord friendly!
+Bugs:
+
+version DEV-1.0.0:
+Added following commands: Version, Ping, lastcommand, avatar and changelog (ME!)
+Changed:
+Bugs: lastcommand (Not currently possible, logging in the future? Not avaliable in the live version), avatar (broken in 1.0.0, fixed in 1.1.0)```

@@ -1,2 +1,0 @@
-version DEV-1.0.0:
-Added following commands: Version, Ping, lastcommand (Currently Broken), user avatar (Currently broken) and changelog (ME!)
