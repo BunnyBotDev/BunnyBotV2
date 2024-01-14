@@ -11,7 +11,7 @@ class dinfo(apc.Group, name="debugging"):
     @apc.command()
     async def version(self, interaction: discord.Interaction):
         """What Version I Am (Format: MajorVersion.MinorVersion.EmergencyPatch)"""
-        await interaction.response.send_message("I am running version: DEV-1.0.0", ephemeral=True)
+        await interaction.response.send_message("I am running version: DEV-1.1.0", ephemeral=True)
     
     @apc.command()
     async def ping(self, interaction: discord.Interaction):

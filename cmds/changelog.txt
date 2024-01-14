@@ -1,10 +1,12 @@
 ```version DEV-1.1.0:
-Added:
-Fixed: Avatar (I work now!)
-changed: naming so that the groups are more discord friendly! Moved and changed the internal file setup to allow direct-git pushes from my code instance. Deleted redundant and unused packages/requirements
-Bugs:
+Release Date: 1/13/24
+Added: Automatic Twitter Embed Fixer (Thanks Maddi!), Custom discord Status!
+Fixed: Avatar (Thanks Hidden!)
+Changed: Changed naming so that the groups are more discord friendly! Moved and changed the internal file setup to allow direct-git pushes from my code instance. Deleted redundant and unused packages/requirements, Removed a print guild in __main__
+Bugs: Current bot does not set itself as admin due to my own fault.
 
 version DEV-1.0.0:
+Release Date: 1/12/24
 Added following commands: Version, Ping, lastcommand, avatar and changelog (ME!)
 Changed:
 Bugs: lastcommand (Not currently possible, logging in the future? Not avaliable in the live version), avatar (broken in 1.0.0, fixed in 1.1.0)```
