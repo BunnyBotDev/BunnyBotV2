@@ -1,8 +1,6 @@
 import discord
 from discord import app_commands as apc
 import os
-import pythonping
-from pythonping import ping
 
 class gcom(apc.Group, name="general"):
     def __init__(self, bot: discord.ext.commands.Bot):

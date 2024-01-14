@@ -5,8 +5,6 @@ import time
 from dotenv import load_dotenv
 import cmds.debug as debug
 import cmds.gencom as gencom
-import pythonping
-from pythonping import ping
 
 
 #grabs my token
