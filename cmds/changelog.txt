@@ -1,4 +1,10 @@
-```version DEV_WC-2.0.0
+```version: DEV_WC 2.1.0
+Release Date: 1/14/24
+Added: Dice command (want to add an option for a tutorial but the dice rolling works), added more verbose user information command
+Changed: Plans, Music bot has been pushed back (it scares me), Have two sets of information commands ready for implimentation but they need a work around for when im not up at 2am
+Bugs: 
+
+version DEV_WC-2.0.0
 Release Date: 1/14/24
 Added: variables.json to store variables to be used throuhgout the scripts, added Json as an import to both __main__ and debug.
 Changed: The way that the Version number works, now being stored within variables.json.
