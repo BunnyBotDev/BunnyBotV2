@@ -1,4 +1,10 @@
-```version DEV-1.1.0:
+```version NM-1.1.0:
+Release Date: 1/14/24
+Added:
+Changed: Changed from the DEV version to NM signifying full version release; Changed vx to fx for better embedding in the auto-twitter embedder, updated version strings in "version" command aswell as the custom-status.
+Bugs:
+
+version DEV-1.1.0:
 Release Date: 1/13/24
 Added: Automatic Twitter Embed Fixer (Thanks Maddi!), Custom discord Status!
 Fixed: Avatar (Thanks Hidden!)

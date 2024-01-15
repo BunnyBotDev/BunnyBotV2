@@ -14,14 +14,14 @@ GUILD = discord.Object(os.getenv("GUILD"))
 
 #custom activity
 activity = discord.CustomActivity(
-    name = "Your bunny maid is on firmware version: DEV-1.1.0",
+    name = "Your bunny maid is on firmware version: NM-1.1.0",
 )
 
 # using discord.Activity
 activity = discord.Activity(
    type = discord.ActivityType.custom,
    name = "Custom Status",  # does nothing but is required
-   state = "Your bunny maid is on firmware version: DEV-1.1.0"
+   state = "Your bunny maid is on firmware version: NM-1.1.0"
 )
 
 
@@ -44,13 +44,13 @@ async def on_message(message):
     if message.author == bot.user:
         return
     if "https://twitter.com" in message.content:
-        await message.channel.send(message.content.replace("https://twitter.com/","https://vxtwitter.com/"))
+        await message.channel.send(message.content.replace("https://twitter.com/","https://fxtwitter.com/"))
         await message.delete()
     if "https://x.com/" in message.content:
-        await message.channel.send(message.content.replace("https://x.com/","https://vxtwitter.com/"))
+        await message.channel.send(message.content.replace("https://x.com/","https://fxtwitter.com/"))
         await message.delete()
         await bot.process_commands(message)
-             
+            
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=activity)
