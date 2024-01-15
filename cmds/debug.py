@@ -10,7 +10,7 @@ class dinfo(apc.Group, name="debugging"):
 #Setup of commands, developer and debug
     @apc.command()
     async def version(self, interaction: discord.Interaction):
-        """What Version I the bot is runnning (Format: Codename-MajorVersion.MinorVersion.EmergencyPatch)"""
+        """What Version BunnyBot is running (Format: Codename-MajorVersion.MinorVersion.EmergencyPatch)"""
         await interaction.response.send_message("I am running version: New Moon-1.1.0", ephemeral=True)
     
     @apc.command()
