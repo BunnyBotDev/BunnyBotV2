@@ -5,25 +5,32 @@ import time
 from dotenv import load_dotenv
 import cmds.debug as debug
 import cmds.gencom as gencom
+import json
 
+#Json Loading
+with open('variables.json') as var_file:
+#Json variables
+    pjson = json.load(var_file)
+VSHORT = pjson['VSHORT']
+VLONG = pjson['VLONG']
 
-#grabs my token
+#Sets up variables
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
 GUILD = discord.Object(os.getenv("GUILD"))
 
 #custom activity
 activity = discord.CustomActivity(
-    name = "Your bunny maid is on firmware version: NM-1.1.0",
+    name = f"Your bunny maid is on firmware version: {VSHORT}",
 )
+
 
 # using discord.Activity
 activity = discord.Activity(
    type = discord.ActivityType.custom,
    name = "Custom Status",  # does nothing but is required
-   state = "Your bunny maid is on firmware version: NM-1.1.0"
+   state = f"Your bunny maid is on firmware version: {VSHORT}"
 )
-
 
 #setting intents
 intents = discord.Intents.default()
@@ -37,7 +44,7 @@ bot.tree.add_command(gencom.gcom(bot), guild=GUILD)
 @bot.event
 async def on_ready():
     await bot.tree.sync(guild=GUILD)
-    print("Bunnybot loaded! {} {}".format(bot.user.name,bot.user.id))
+    print("Bunnybot loaded! {} {}".format(bot.user.name,bot.user.id), f"Version: {VLONG}")
 
 @bot.event
 async def on_message(message):
