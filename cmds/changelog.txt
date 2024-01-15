@@ -1,4 +1,10 @@
-```version: DEV_WC 2.1.0
+```version: DEV_WC 2.2.0
+Release Date: 1/15/24
+Added: Implemented the status command, added a server status command, added fullchangelog and made changelog only show the last updates from previous version, created a second discord bot account to test DEV-XX X.X.X updates whilst BunnyBotV2 stays on a stable release version
+Changed: Version strings in the variables.json, made the executive decision split changelog into two commands as eventually this file will be too long for a single discord message
+Bugs:
+
+version: DEV_WC 2.1.0
 Release Date: 1/14/24
 Added: Dice command (want to add an option for a tutorial but the dice rolling works), added more verbose user information command
 Changed: Plans, Music bot has been pushed back (it scares me), Have two sets of information commands ready for implimentation but they need a work around for when im not up at 2am

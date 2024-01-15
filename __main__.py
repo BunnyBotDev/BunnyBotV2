@@ -18,6 +18,7 @@ with open('variables.json') as var_file:
     pjson = json.load(var_file)
 VSHORT = pjson['VSHORT']
 VLONG = pjson['VLONG']
+LASTADDED = pjson['LASTADDED']
 
 
 #custom activity
@@ -36,6 +37,8 @@ activity = discord.Activity(
 #setting intents
 intents = discord.Intents.default()
 intents.message_content = True
+intents.members = True
+intents.presences = True
 
 #registering the commands from attached files
 bot = commands.Bot(command_prefix="bb", intents=intents)
