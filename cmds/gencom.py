@@ -42,7 +42,7 @@ class gcom(apc.Group, name="general"):
         e.add_field(name="Created At", value=interaction.guild.created_at)
         await interaction.response.send_message(embed=e)
         
-    ####    BROKEN CURRENTLY; HOURS WASTED: 2   ####
+    ####    FIXED; HOURS WASTED: 4  ####
     @apc.command()
     async def status(self, interaction: discord.Interaction, user: discord.User):
         user = user or interaction.user

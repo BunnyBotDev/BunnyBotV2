@@ -1,4 +1,15 @@
-```version: DEV_WC 2.2.0
+```version: NM 2.4.0
+Release Date: 1/17/24
+Added: A pokemon fun command (thanks hidden, again!), created a new file called gamestats to continue to add new features, new file named fun to continue to add new features.
+changed: Version strings
+
+version: DEV_WC 2.3.0
+Release Date: 1/17/24
+Added: Implemented a new changelog with pages to show the history of the bot (Thanks Hidden, are you trying to get into my changelog?), Implemented a help command, half implmented a way to ask an api for your game stats
+Changed: way I do the changelog
+Bugs:
+
+version: DEV_WC 2.2.0
 Release Date: 1/15/24
 Added: Implemented the status command, added a server status command, added fullchangelog and made changelog only show the last updates from previous version, created a second discord bot account to test DEV-XX X.X.X updates whilst BunnyBotV2 stays on a stable release version
 Changed: Version strings in the variables.json, made the executive decision split changelog into two commands as eventually this file will be too long for a single discord message

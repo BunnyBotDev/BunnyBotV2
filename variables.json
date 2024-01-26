@@ -1,5 +1,4 @@
 {
-    "VLONG":"DEV_Waxing Crescant-2.2.0",
-    "VSHORT":"DEV_WC-2.2.0",
-    "LASTADDED":"Implemented the status command, added a server status command, added fullchangelog and made changelog only show the last updates from previous version, created a second discord bot account to test DEV-XX X.X.X updates whilst BunnyBotV2 stays on a stable release version"
+    "VLONG":"Waxing Crescent-2.4.0",
+    "VSHORT":"WC-2.4.0"
 }
