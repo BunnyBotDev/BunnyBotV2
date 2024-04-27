@@ -1,4 +1,9 @@
 version: NM 2.4.0
+Release Date: 4/27/24
+Added: Status cycling, setup the basic logging
+changed: refactored much of the code, too many small changes everywhere to count.
+
+version: NM 2.4.0
 Release Date: 1/17/24
 Added: A pokemon fun command (thanks hidden, again!), created a new file called gamestats to continue to add new features, new file named fun to continue to add new features.
 changed: Version strings

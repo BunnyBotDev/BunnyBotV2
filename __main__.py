@@ -15,7 +15,7 @@ from cmds import fun
 
 class BunnyBot(commands.Bot):# pylint: disable=missing-class-docstring
     def __init__(self, cfg:dict[str,any], statuses:list[str]=None, changelog:str=None, **args):
-        self.version = ("WC-2.4.0", "Waxing Crescent-2.4.0")
+        self.version = ("WC-2.5.0", "Waxing Crescent-2.5.0")
         self.cfg = cfg
         self.statuses = statuses or ["Hi there"]
         self.changelog = changelog
