@@ -1,4 +1,4 @@
-```version: NM 2.4.0
+version: NM 2.4.0
 Release Date: 1/17/24
 Added: A pokemon fun command (thanks hidden, again!), created a new file called gamestats to continue to add new features, new file named fun to continue to add new features.
 changed: Version strings
@@ -21,26 +21,26 @@ Added: Dice command (want to add an option for a tutorial but the dice rolling w
 Changed: Plans, Music bot has been pushed back (it scares me), Have two sets of information commands ready for implimentation but they need a work around for when im not up at 2am
 Bugs: 
 
-version DEV_WC-2.0.0
+version: DEV_WC-2.0.0
 Release Date: 1/14/24
 Added: variables.json to store variables to be used throuhgout the scripts, added Json as an import to both __main__ and debug.
 Changed: The way that the Version number works, now being stored within variables.json.
 Bugs:
 
-version NM-1.1.0:
+version: NM-1.1.0
 Release Date: 1/14/24
 Added:
 Changed: Changed from the DEV version to NM signifying full version release; Changed vx to fx for better embedding in the auto-twitter embedder, updated version strings in "version" command aswell as the custom-status.
 Bugs:
 
-version DEV_NM-1.1.0:
+version: DEV_NM-1.1.0
 Release Date: 1/13/24
 Added: Automatic Twitter Embed Fixer (Thanks Maddi!), Custom discord Status!
 Fixed: Avatar (Thanks Hidden!)
 Changed: Changed naming so that the groups are more discord friendly! Moved and changed the internal file setup to allow direct-git pushes from my code instance. Deleted redundant and unused packages/requirements, Removed a print guild in __main__
 Bugs: Current bot does not set itself as admin due to my own fault.
 
-version DEV_NM-1.0.0:
+version: DEV_NM-1.0.0
 Release Date: 1/12/24
 Added following commands: Version, Ping, lastcommand, avatar and changelog (ME!)
 Changed:

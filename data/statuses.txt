@@ -1,0 +1,3 @@
+Your bunny maid is on firmware version: {bot.version[0]}
+Modularized!
+Executing order 66

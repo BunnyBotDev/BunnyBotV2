@@ -1,13 +1,12 @@
+from random import choice, choices
+
 import discord
 from discord import app_commands as apc
-import os
-import time
-import requests
-import json
+from discord.ext import commands
 import aiohttp
-import random
 
-class comsfun(apc.Group, name="funcommands"):
+class Fun(commands.Cog, name="funcommands"):
+    """Fun commands for bunnybotv2"""
     def __init__(self, bot: discord.ext.commands.Bot):
         super().__init__()
         self.bot = bot
@@ -42,7 +41,6 @@ class comsfun(apc.Group, name="funcommands"):
         e = discord.Embed()
         async with aiohttp.ClientSession() as session:
             async with session.get(url.format(endpoint, poke), headers=headers) as resp:
-                print(await resp.text())
                 if resp.status == 404:
                     await interaction.followup.send(f"That pokemon ({poke}) doesn't seem to exist!")
                     return
@@ -53,7 +51,7 @@ class comsfun(apc.Group, name="funcommands"):
 
         dex_num=[x for x in data_spec['pokedex_numbers'] if x['pokedex']['name'] == 'national'][0]['entry_number']
         e.title = data_spec['name'].capitalize() + f" (#{dex_num:04d})"
-        flavor_text = random.choice([x for x in data_spec['flavor_text_entries'] if x['language']['name'] == 'en'])['flavor_text'] \
+        flavor_text = choice([x for x in data_spec['flavor_text_entries'] if x['language']['name'] == 'en'])['flavor_text'] \
             .replace('\f',       '\n') \
             .replace('\u00ad\n', '') \
             .replace('\u00ad',   '') \
@@ -73,7 +71,7 @@ class comsfun(apc.Group, name="funcommands"):
         weights = []
         for x in sprites:
             weights.append(1 if x.startswith('front_shiny') else 24)
-        e.set_image(url=data['sprites'][random.choices(sprites, weights)[0]])
+        e.set_image(url=data['sprites'][choices(sprites, weights)[0]])
         #stats
         for x in range(6):
             e.add_field(name=data['stats'][x]['stat']['name'], value=data['stats'][x]['base_stat'])
