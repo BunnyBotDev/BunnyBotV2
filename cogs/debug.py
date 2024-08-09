@@ -60,3 +60,7 @@ class Debug(commands.Cog, name="debugging"):
         pages = self.bot.changelog.split('\n\n')
         paged = PagedChangelog(pages)
         await interaction.response.send_message(embed=paged.embed(), view=paged)
+
+
+async def setup(bot: commands.bot):
+    await bot.add_cog(Debug(bot), guild=bot.guild)

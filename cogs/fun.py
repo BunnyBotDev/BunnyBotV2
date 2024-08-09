@@ -7,7 +7,7 @@ import aiohttp
 
 class Fun(commands.Cog, name="funcommands"):
     """Fun commands for bunnybotv2"""
-    def __init__(self, bot: discord.ext.commands.Bot):
+    def __init__(self, bot: commands.Bot):
         super().__init__()
         self.bot = bot
         
@@ -81,3 +81,6 @@ class Fun(commands.Cog, name="funcommands"):
         for x in data['abilities']:
             e.add_field(name='Hidden Ability' if x['is_hidden'] else 'Ability', value=x['ability']['name'])
         await interaction.followup.send(embed=e)
+
+async def setup(bot: commands.bot):
+    await bot.add_cog(Fun(bot), guild=bot.guild)

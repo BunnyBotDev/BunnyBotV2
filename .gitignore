@@ -114,6 +114,20 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
+**__pycache__
 
 data/config.json
 logs/
+
+#
+cogs/*
+!cogs/debug.py
+!cogs/fun.py
+!cogs/gamestats.py
+!cogs/general.py
+
+#this should only hold necessary files or example files in the git
+data/*
+!data/config.json.example
+!data/statuses.txt
+!data/changelog.txt

@@ -8,7 +8,7 @@ from dice import roll, DiceBaseException
 
 class General(commands.Cog, name="general"):
     """Bunnybotv2's General Commands"""
-    def __init__(self, bot: discord.ext.commands.Bot):
+    def __init__(self, bot: commands.Bot):
         super().__init__()
         self.bot = bot
 
@@ -34,8 +34,9 @@ class General(commands.Cog, name="general"):
         e.add_field(name='Join Date', value=user.joined_at)
         e.add_field(name='Registration Date', value=user.created_at)
         e.add_field(name='Profile Picture', value=user.avatar)
-         #setting the embeds image to the users avatar that was passed via discord.User
-        e.set_image(url=str(user.avatar))
+        if user.avatar is not None:
+            #setting the embeds image to the users avatar that was passed via discord.User
+            e.set_image(url=str(user.avatar))
         await interaction.response.send_message(f"Heres is <@{user.id}>'s info!", embed=e, ephemeral=False)
 
     @apc.command()
@@ -107,3 +108,6 @@ class General(commands.Cog, name="general"):
         else:
             message = f"total 🎲 is {a} \nSince you rolled multiple sets of dice, I couldn't get you the list of individual dice rolls."
         await interaction.response.send_message(message, ephemeral=False)
+
+async def setup(bot: commands.bot):
+    await bot.add_cog(General(bot), guild=bot.guild)
