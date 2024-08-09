@@ -10,7 +10,7 @@ class Fun(commands.Cog, name="funcommands"):
     def __init__(self, bot: commands.Bot):
         super().__init__()
         self.bot = bot
-        
+
     @apc.command()
     async def pokemon(self, interaction: discord.Interaction, poke: str):
         await interaction.response.defer(thinking=True) #defer, switches bot status to thinking.

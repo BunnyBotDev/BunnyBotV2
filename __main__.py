@@ -44,20 +44,20 @@ class BunnyBot(commands.Bot):# pylint: disable=missing-class-docstring
             with open(Path(__file__).parent / 'data' / (filename + '.json'), 'w', encoding='utf-8') as f:
                 json.dump(data, f)
                 return True
-        except OSError as e:
-            self.logger.error("Failed to write data file '%s': \n %s", filename, e)
+        except OSError:
+            self.logger.error("Failed to write data file '%s':", filename, exc_info=True)
             return False
 
     async def on_message(self, message:discord.Message): # pylint: disable=arguments-differ
         if message.author.bot:
             return
         if "https://twitter.com" in message.content:
-            await message.channel.send("message originally from message.author.mention:\n" +
+            await message.channel.send(f"message originally from {message.author.mention}:\n" +
                     message.content.replace("https://twitter.com/","https://fxtwitter.com/"),
                     silent=True)
             await message.delete()
         if "https://x.com/" in message.content:
-            await message.channel.send("message originally from message.author.mention:\n" +
+            await message.channel.send(f"message originally from {message.author.mention}:\n" +
                     message.content.replace("https://x.com/","https://fxtwitter.com/"),
                     silent=True)
             await message.delete()
@@ -66,7 +66,7 @@ class BunnyBot(commands.Bot):# pylint: disable=missing-class-docstring
         tg = asyncio.TaskGroup()
         async with tg: #schedule all the extensions to load at once.
             for i in glob.glob("cogs/*.py"):
-                tg.create_task(self.load_extension(i.replace('\\', '.')[:-3])) 
+                tg.create_task(self.load_extension(i.replace('\\', '.')[:-3]))
 
         await self.tree.sync(guild=self.guild)
 
@@ -128,5 +128,6 @@ def main():
     bot = BunnyBot(config, STATUSES, CHANGELOG, command_prefix="bb ", intents=intents)
 
     bot.run(TOKEN, log_handler=None)
+
 if __name__ == "__main__":
     main()
